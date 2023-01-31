@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomap</title>
+    <link rel="stylesheet" href="./index.css"></link>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+</head>
+<body>
+    <h1 id="title">United States Educational Attainment</h1>
+    <p id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</p>
+    <div id="tooltip"></div>
+    <div id="container">
+    
+        
+        <svg id="geomap"></svg>
+        <svg id="legend">
+            <g>
+                <rect x="10" y="0" width="40" height="40" fill='#E0E1DD'></rect>
+                <text x="60" y="20" fill="black">Less than 20%</text>
+            </g>
+            <g>
+                <rect x="10" y="40" width="40" height="40" fill='#778DA9'></rect>
+                <text x="60" y="60" fill="black">20% to 40%</text>
+            </g>
+            <g>
+                <rect x="10" y="80" width="40" height="40" fill='#415A77'></rect>
+                <text x="60" y="100" fill="black">40% to 60%</text>
+            </g>
+            <g>
+                <rect x="10" y="120" width="40" height="40" fill='#1B263B'></rect>
+                <text x="60" y="140" fill="black">60% to 80%</text>
+            </g>
+            <g>
+                <rect x="10" y="160" width="40" height="40" fill='#0D1B2A' ></rect>
+                <text x="60" y="180" fill="black">80% and more</text>
+            </g>
+    
+        </svg>
+    </div>
+    <script defer type="module" src="./index.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+<footer>
+    <p>Source: <a href="https://www.ers.usda.gov/data-products/county-level-data-sets/county-level-data-sets-download-data/">USDA Economic Research Service</a> </p>
+</footer>
+</html>
